@@ -40,24 +40,24 @@ ros::Duration d(0.01);
 class Listener
 {
 public:
-  void chatter1(const std_msgs::String::ConstPtr& msg)
+  void chatter1(const std_msgs::String::ConstPtr &msg)
   {
     ROS_INFO_STREAM("chatter1: [" << msg->data << "] [thread=" << boost::this_thread::get_id() << "]");
     d.sleep();
   }
-  void chatter2(const std_msgs::String::ConstPtr& msg)
+  void chatter2(const std_msgs::String::ConstPtr &msg)
   {
     ROS_INFO_STREAM("chatter2: [" << msg->data << "] [thread=" << boost::this_thread::get_id() << "]");
     d.sleep();
   }
-  void chatter3(const std_msgs::String::ConstPtr& msg)
+  void chatter3(const std_msgs::String::ConstPtr &msg)
   {
     ROS_INFO_STREAM("chatter3: [" << msg->data << "] [thread=" << boost::this_thread::get_id() << "]");
     d.sleep();
   }
 };
 
-void chatter4(const std_msgs::String::ConstPtr& msg)
+void chatter4(const std_msgs::String::ConstPtr &msg)
 {
   ROS_INFO_STREAM("chatter4: [" << msg->data << "] [thread=" << boost::this_thread::get_id() << "]");
   d.sleep();
@@ -91,4 +91,3 @@ int main(int argc, char **argv)
 
   return 0;
 }
-

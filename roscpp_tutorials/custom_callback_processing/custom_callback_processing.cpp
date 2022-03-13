@@ -39,7 +39,7 @@
 /**
  * This callback gets called from the main queue processed in spin()
  */
-void chatterCallbackMainQueue(const std_msgs::String::ConstPtr& msg)
+void chatterCallbackMainQueue(const std_msgs::String::ConstPtr &msg)
 {
   ROS_INFO_STREAM("I heard: [ " << msg->data << "] in thread [" << boost::this_thread::get_id() << "] (Main thread)");
 }
@@ -47,7 +47,7 @@ void chatterCallbackMainQueue(const std_msgs::String::ConstPtr& msg)
 /**
  * This callback gets called from the custom queue
  */
-void chatterCallbackCustomQueue(const std_msgs::String::ConstPtr& msg)
+void chatterCallbackCustomQueue(const std_msgs::String::ConstPtr &msg)
 {
   ROS_INFO_STREAM("I heard: [ " << msg->data << "] in thread [" << boost::this_thread::get_id() << "]");
 }
